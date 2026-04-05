@@ -1,0 +1,182 @@
+/* ========================================= */
+/* FLEXBOX EN CSS                            */
+/* ========================================= */
+/* Flexbox es un modelo de diseño UNIDIMENSIONAL (una fila o una columna).
+   Se activa con display: flex en el contenedor PADRE.
+   Los hijos directos se convierten en "flex items".
+
+   Conceptos clave:
+   - Eje principal: dirección en la que fluyen los items (row = horizontal, column = vertical)
+   - Eje cruzado: perpendicular al eje principal
+   - justify-content: alinea en el eje PRINCIPAL
+   - align-items: alinea en el eje CRUZADO */
+
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-top: 30px;
+}
+
+h3 {
+    color: #7f8c8d;
+    margin-top: 15px;
+}
+
+/* Estilo base para todos los contenedores flex */
+.contenedor {
+    display: flex;            /* ← ACTIVA FLEXBOX en este contenedor */
+    background-color: #ecf0f1;
+    border: 2px solid #bdc3c7;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* Estilo base para los items (hijos) */
+.item {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 25px;
+    margin: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* =============================== */
+/* 1. FLEX-DIRECTION               */
+/* =============================== */
+/* Define la dirección del eje principal */
+/* row (por defecto): los items van en fila (→) */
+/* column: los items van en columna (↓) */
+/* row-reverse: fila invertida (←) */
+/* column-reverse: columna invertida (↑) */
+
+.direccion-fila {
+    flex-direction: row; /* los items van de izquierda a derecha */
+}
+
+.direccion-columna {
+    flex-direction: column; /* los items van de arriba a abajo */
+}
+
+/* =============================== */
+/* 2. JUSTIFY-CONTENT              */
+/* =============================== */
+/* Alinea los items en el eje PRINCIPAL */
+/* Si flex-direction: row → alinea horizontalmente */
+/* Si flex-direction: column → alinea verticalmente */
+
+.jc-start {
+    justify-content: flex-start; /* items al inicio (por defecto) */
+}
+
+.jc-center {
+    justify-content: center; /* items al centro */
+}
+
+.jc-end {
+    justify-content: flex-end; /* items al final */
+}
+
+.jc-between {
+    justify-content: space-between; /* primer item al inicio, último al final, espacio igual entre ellos */
+}
+
+.jc-around {
+    justify-content: space-around; /* espacio igual ALREDEDOR de cada item (se duplica entre items) */
+}
+
+.jc-evenly {
+    justify-content: space-evenly; /* espacio EXACTAMENTE IGUAL entre todos los gaps */
+}
+
+/* =============================== */
+/* 3. ALIGN-ITEMS                  */
+/* =============================== */
+/* Alinea los items en el eje CRUZADO (perpendicular) */
+/* Si flex-direction: row → alinea verticalmente */
+/* Si flex-direction: column → alinea horizontalmente */
+
+.ai-stretch {
+    align-items: stretch; /* los items se estiran para llenar el alto del contenedor (por defecto) */
+    min-height: 120px;
+}
+
+.ai-center {
+    align-items: center; /* items centrados verticalmente */
+    min-height: 120px;
+}
+
+.ai-start {
+    align-items: flex-start; /* items pegados arriba */
+    min-height: 120px;
+}
+
+.item-alto {
+    padding: 30px 25px; /* item más alto para notar la diferencia */
+}
+
+/* =============================== */
+/* 4. FLEX-WRAP                    */
+/* =============================== */
+/* Controla si los items saltan a la siguiente línea cuando no caben */
+/* nowrap (por defecto): todos en una línea, se comprimen si es necesario */
+/* wrap: los items saltan a la siguiente línea */
+/* wrap-reverse: saltan hacia arriba */
+
+.wrap-no {
+    flex-wrap: nowrap; /* los items se comprimen para caber en una línea */
+}
+
+.wrap-si {
+    flex-wrap: wrap; /* los items saltan a la siguiente línea si no caben */
+}
+
+.item-ancho {
+    min-width: 150px; /* ancho mínimo para forzar el wrap */
+}
+
+/* =============================== */
+/* 5. GAP                          */
+/* =============================== */
+/* gap: espacio entre items (sin afectar los bordes del contenedor) */
+/* Más limpio que usar margin en los items */
+.con-gap {
+    gap: 20px; /* 20px de espacio entre cada item */
+    /* También se puede separar: row-gap y column-gap */
+}
+
+/* =============================== */
+/* 6. PROPIEDADES DE LOS HIJOS     */
+/* =============================== */
+/* flex-grow: cuánto CRECE un item para llenar espacio disponible (0 = no crece) */
+/* flex-shrink: cuánto se ENCOGE cuando falta espacio (1 = se encoge proporcionalmente) */
+/* flex-basis: tamaño BASE del item antes de repartir espacio (auto = usa width/height) */
+
+.grow-1 {
+    flex-grow: 1; /* crece 1 parte del espacio disponible */
+}
+
+.grow-2 {
+    flex-grow: 2; /* crece 2 partes (el doble que grow-1) */
+    background-color: #e74c3c;
+}
+
+/* =============================== */
+/* 7. CENTRADO PERFECTO            */
+/* =============================== */
+/* El truco más útil de flexbox: centrar horizontal Y verticalmente */
+.centrado-perfecto {
+    justify-content: center; /* centra horizontalmente */
+    align-items: center;     /* centra verticalmente */
+    height: 200px;           /* necesita un alto definido para centrar verticalmente */
+    background-color: #2c3e50;
+}

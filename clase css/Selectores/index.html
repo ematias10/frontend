@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores en CSS</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Clase CSS</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../Colores/index.html">Colores</a></li>
+                <li><a href="../Display/index.html">Display</a></li>
+                <li><a href="../Flexbox/index.html">Flexbox</a></li>
+                <li><a href="../Grid/index.html">Grid</a></li>
+                <li><a href="../Jerarquia/index.html">Jerarquía</a></li>
+                <li><a href="../Modelo-de-Caja/index.html">Modelo de Caja</a></li>
+                <li><a href="../Posicionamiento/index.html">Posicionamiento</a></li>
+                <li><a href="../Pseudoclases/index.html">Pseudoclases</a></li>
+                <li><a href="../Selectores/index.html">Selectores</a></li>
+                <li><a href="../Tipografia/index.html">Tipografía</a></li>
+                <li><a href="../Unidades/index.html">Unidades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenido">
+        <h1>Selectores en CSS</h1>
+
+    <!-- Los selectores son la forma de "apuntar" a los elementos HTML que queremos estilizar -->
+
+    <!-- 1. Selector de ETIQUETA: aplica a todos los elementos de ese tipo -->
+    <h2>1. Selector de etiqueta</h2>
+    <p>Todos los párrafos tienen el mismo estilo base (selector: p)</p>
+    <p>Este también, porque soy un párrafo.</p>
+
+    <!-- 2. Selector de CLASE (.nombre): aplica a elementos con esa clase -->
+    <!-- Se puede reutilizar en múltiples elementos -->
+    <h2>2. Selector de clase (.clase)</h2>
+    <p class="resaltado">Tengo la clase "resaltado".</p>
+    <p class="resaltado">Yo también tengo la clase "resaltado".</p>
+    <div class="resaltado">¡Incluso un div puede tener la misma clase!</div>
+
+    <!-- 3. Selector de ID (#nombre): aplica a UN solo elemento -->
+    <!-- El ID debe ser ÚNICO en toda la página -->
+    <h2>3. Selector de ID (#id)</h2>
+    <p id="especial">Soy el único elemento con id="especial".</p>
+
+    <!-- 4. Selector DESCENDIENTE (espacio): selecciona hijos en cualquier nivel -->
+    <h2>4. Selector descendiente (espacio)</h2>
+    <div class="contenedor-desc">
+        <p>Soy un párrafo DENTRO del contenedor (me afecta el selector).</p>
+        <div>
+            <p>Soy un párrafo ANIDADO más profundo (también me afecta).</p>
+        </div>
+    </div>
+    <p>Soy un párrafo FUERA del contenedor (no me afecta).</p>
+
+    <!-- 5. Selector HIJO DIRECTO (>): solo selecciona hijos inmediatos -->
+    <h2>5. Selector hijo directo (>)</h2>
+    <div class="contenedor-hijo">
+        <p>Soy hijo DIRECTO del contenedor (me afecta).</p>
+        <div>
+            <p>Soy nieto, NO hijo directo (no me afecta).</p>
+        </div>
+    </div>
+
+    <!-- 6. Selector de ATRIBUTO: selecciona por atributos HTML -->
+    <h2>6. Selector de atributo</h2>
+    <input type="text" placeholder="Soy tipo text">
+    <input type="email" placeholder="Soy tipo email">
+    <input type="password" placeholder="Soy tipo password">
+    <a href="https://ejemplo.com" target="_blank">Enlace externo</a>
+
+    <!-- 7. Selectores MÚLTIPLES (coma): aplica el mismo estilo a varios selectores -->
+    <h2>7. Selector múltiple (coma)</h2>
+    <p class="info">Párrafo con clase info</p>
+    <p class="alerta">Párrafo con clase alerta</p>
+
+    <!-- 8. Selector UNIVERSAL (*): aplica a TODOS los elementos -->
+    <h2>8. Selector universal (*)</h2>
+    <p>El selector * se usa generalmente para resetear estilos (ver CSS).</p>
+
+    <!-- 9. Combinación de selectores -->
+    <h2>9. Combinaciones</h2>
+    <p class="grande negrita">Tengo dos clases: "grande" y "negrita"</p>
+    <p class="grande">Solo tengo la clase "grande"</p>
+    <div class="grande">Soy un div con clase "grande" (no soy p.grande)</div>
+    </main>
+</body>
+</html>

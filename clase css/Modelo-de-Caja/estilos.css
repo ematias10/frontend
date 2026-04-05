@@ -1,0 +1,116 @@
+/* ========================================= */
+/* MODELO DE CAJA (BOX MODEL)                */
+/* ========================================= */
+/* Todo elemento HTML es una caja rectangular con 4 capas:
+   1. CONTENT (contenido): el texto o hijos del elemento
+   2. PADDING (relleno): espacio INTERNO entre contenido y borde
+   3. BORDER (borde): línea que rodea el padding
+   4. MARGIN (margen): espacio EXTERNO entre la caja y otros elementos
+
+   Orden de adentro hacia afuera: content → padding → border → margin */
+
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+h1, h2 {
+    color: #2c3e50;
+}
+
+/* ---- CAJA BÁSICA ---- */
+/* Muestra las 4 capas del modelo de caja */
+.caja-basica {
+    /* CONTENT: definimos el ancho del contenido */
+    width: 400px;
+    /* PADDING: espacio interno de 20px en todos los lados */
+    padding: 20px;
+    /* BORDER: borde de 3px sólido */
+    border: 3px solid #2c3e50;
+    /* MARGIN: espacio externo de 20px en todos los lados */
+    margin: 20px;
+    background-color: #ecf0f1;
+}
+
+/* ---- PADDING (relleno interno) ---- */
+/* El padding empuja el contenido hacia adentro */
+.caja-padding {
+    width: 400px;
+    /* padding: 40px aplica 40px en TODOS los lados (arriba, derecha, abajo, izquierda) */
+    padding: 40px;
+    border: 2px solid #3498db;
+    margin: 20px;
+    background-color: #d5e8f7;
+}
+
+/* ---- MARGIN (espacio exterior) ---- */
+/* El margin crea separación entre elementos */
+.caja-margin {
+    width: 400px;
+    padding: 15px;
+    border: 2px solid #e74c3c;
+    /* margin: 50px aplica 50px de espacio exterior en todos los lados */
+    margin: 50px;
+    background-color: #fde0dc;
+}
+
+/* ---- BORDER (borde) ---- */
+/* El borde tiene 3 propiedades: grosor, estilo y color */
+.caja-border {
+    width: 400px;
+    padding: 15px;
+    /* border: grosor estilo color */
+    /* Estilos disponibles: solid, dashed, dotted, double, groove, ridge, inset, outset */
+    border: 5px dashed #27ae60;
+    margin: 20px;
+    background-color: #d5f5e3;
+}
+
+/* ---- PADDING INDIVIDUAL POR LADO ---- */
+.caja-padding-individual {
+    width: 400px;
+    /* Se puede definir padding por cada lado individualmente */
+    padding-top: 10px;      /* arriba */
+    padding-right: 30px;    /* derecha */
+    padding-bottom: 50px;   /* abajo */
+    padding-left: 70px;     /* izquierda */
+    /* También se puede abreviar en una sola línea: */
+    /* padding: arriba derecha abajo izquierda; → padding: 10px 30px 50px 70px; */
+    /* padding: arriba lateral abajo; → padding: 10px 30px 50px; */
+    /* padding: vertical horizontal; → padding: 10px 30px; */
+    /* padding: todos; → padding: 10px; */
+    /* Lo mismo aplica para margin */
+    border: 2px solid #8e44ad;
+    margin: 20px;
+    background-color: #ebdef0;
+}
+
+/* ---- BOX-SIZING ---- */
+/* content-box (valor por defecto): width solo mide el contenido */
+/* El ancho TOTAL = width + padding-izq + padding-der + border-izq + border-der */
+.caja-content-box {
+    box-sizing: content-box; /* valor por defecto */
+    width: 300px;
+    padding: 20px;
+    border: 5px solid #e67e22;
+    margin: 20px;
+    background-color: #fdebd0;
+    /* Ancho total visible = 300 + 20 + 20 + 5 + 5 = 350px */
+}
+
+/* border-box: width incluye contenido + padding + border */
+/* El ancho TOTAL visible será exactamente el width definido */
+.caja-border-box {
+    box-sizing: border-box; /* ¡MUY USADO! */
+    width: 300px;
+    padding: 20px;
+    border: 5px solid #2980b9;
+    margin: 20px;
+    background-color: #d6eaf8;
+    /* Ancho total visible = exactamente 300px */
+    /* El contenido se ajusta: 300 - 20 - 20 - 5 - 5 = 250px para el contenido */
+}

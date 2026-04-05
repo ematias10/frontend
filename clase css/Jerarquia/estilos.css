@@ -1,0 +1,37 @@
+/* Estilos para la jerarquía de CSS */
+/* Se aplican estilos a los elementos según su jerarquía: id > clase > etiqueta */
+
+/* Estilo para el cuerpo del documento (afecta a todos los elementos de la página) */
+body{
+    /* Aquí puedes agregar estilos para el cuerpo del documento */
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    /* Estilo para el fondo del cuerpo del documento */
+    background-color: #f0f0f0;
+    /* Estilo para el color del texto del cuerpo del documento */
+    color: #333;
+}
+
+/* Estilo para todos los elementos con la etiqueta "p" (afecta a todos los párrafos) */
+p{
+    /* Aquí puedes agregar estilos para los párrafos */
+    font-size: 16px;
+    line-height: 1.5;
+    /* Estilo para el color del texto de los párrafos */
+    color: #555;
+}
+
+/* Estilo para los elementos con la clase "texto_verde" (afecta a los párrafos con esta clase) */
+.texto_verde{
+    /* Aquí puedes agregar estilos para los elementos con la clase "texto_verde" */
+    color: green;
+    font-weight: bold;
+}
+
+/* Estilo para el elemento con el id "texto_rojo" (afecta al párrafo con este id) */
+#texto_rojo{
+    /* Aquí puedes agregar estilos para el elemento con el id "texto_rojo" */
+    color: red;
+    font-weight: bold;
+}

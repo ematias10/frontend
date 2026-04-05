@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclases y Pseudoelementos en CSS</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Clase CSS</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../Colores/index.html">Colores</a></li>
+                <li><a href="../Display/index.html">Display</a></li>
+                <li><a href="../Flexbox/index.html">Flexbox</a></li>
+                <li><a href="../Grid/index.html">Grid</a></li>
+                <li><a href="../Jerarquia/index.html">Jerarquía</a></li>
+                <li><a href="../Modelo-de-Caja/index.html">Modelo de Caja</a></li>
+                <li><a href="../Posicionamiento/index.html">Posicionamiento</a></li>
+                <li><a href="../Pseudoclases/index.html">Pseudoclases</a></li>
+                <li><a href="../Selectores/index.html">Selectores</a></li>
+                <li><a href="../Tipografia/index.html">Tipografía</a></li>
+                <li><a href="../Unidades/index.html">Unidades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenido">
+        <h1>Pseudoclases y Pseudoelementos en CSS</h1>
+
+    <!-- Las PSEUDOCLASES seleccionan elementos según su ESTADO o POSICIÓN -->
+    <!-- Sintaxis: selector:pseudoclase { ... } (con UN solo dos puntos) -->
+
+    <!-- 1. :hover - cuando el mouse está ENCIMA del elemento -->
+    <h2>:hover (pasar el mouse encima)</h2>
+    <button class="btn-hover">Pasa el mouse sobre mí</button>
+    <div class="caja-hover">Esta caja cambia de color al pasar el mouse</div>
+
+    <!-- 2. :active - cuando el elemento está siendo PRESIONADO -->
+    <h2>:active (al hacer clic)</h2>
+    <button class="btn-active">Haz clic y mantén presionado</button>
+
+    <!-- 3. :focus - cuando el elemento tiene el FOCO (seleccionado con teclado o clic) -->
+    <h2>:focus (al hacer foco en el input)</h2>
+    <input type="text" class="input-focus" placeholder="Haz clic aquí para ver el efecto">
+
+    <!-- 4. :first-child y :last-child -->
+    <h2>:first-child y :last-child</h2>
+    <ul class="lista-child">
+        <li>Primer item (first-child → azul)</li>
+        <li>Segundo item</li>
+        <li>Tercer item</li>
+        <li>Cuarto item</li>
+        <li>Último item (last-child → rojo)</li>
+    </ul>
+
+    <!-- 5. :nth-child(n) - selecciona el enésimo hijo -->
+    <h2>:nth-child(n)</h2>
+    <ul class="lista-nth">
+        <li>Item 1</li>
+        <li>Item 2 (nth-child(2) → verde)</li>
+        <li>Item 3</li>
+        <li>Item 4 (nth-child(even) → fondo gris, par)</li>
+        <li>Item 5</li>
+        <li>Item 6 (nth-child(even) → fondo gris, par)</li>
+    </ul>
+
+    <!-- 6. :not() - selecciona todos EXCEPTO los que coincidan -->
+    <h2>:not() (excluir elementos)</h2>
+    <ul class="lista-not">
+        <li>Item normal (afectado)</li>
+        <li class="excluido">Item con clase "excluido" (NO afectado)</li>
+        <li>Item normal (afectado)</li>
+        <li class="excluido">Otro excluido (NO afectado)</li>
+    </ul>
+
+    <!-- ============================== -->
+    <!-- PSEUDOELEMENTOS                -->
+    <!-- ============================== -->
+    <!-- Los PSEUDOELEMENTOS crean "sub-elementos" virtuales -->
+    <!-- Sintaxis: selector::pseudoelemento { ... } (con DOS dos puntos) -->
+
+    <h2>::before y ::after (pseudoelementos)</h2>
+
+    <!-- ::before - inserta contenido ANTES del contenido del elemento -->
+    <!-- ::after - inserta contenido DESPUÉS del contenido del elemento -->
+    <p class="con-icono">Este párrafo tiene un icono antes y después</p>
+
+    <!-- ::first-letter - estiliza la PRIMERA LETRA -->
+    <h2>::first-letter</h2>
+    <p class="letra-capital">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+    <!-- ::first-line - estiliza la PRIMERA LÍNEA -->
+    <h2>::first-line</h2>
+    <p class="primera-linea">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+
+    <!-- ::selection - estiliza el texto cuando lo SELECCIONAS con el mouse -->
+    <h2>::selection</h2>
+    <p class="seleccion-custom">Selecciona este texto con el mouse para ver el efecto personalizado.</p>
+    </main>
+</body>
+</html>

@@ -1,0 +1,133 @@
+/* ========================================= */
+/* TIPOGRAFÍA EN CSS                         */
+/* ========================================= */
+/* La tipografía controla la apariencia del texto:
+   fuente, tamaño, grosor, estilo, alineación y espaciado. */
+
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+p {
+    padding: 8px;
+    margin: 8px 0;
+}
+
+/* ---- font-family: tipo de fuente ---- */
+/* Siempre incluir una fuente genérica como respaldo (serif, sans-serif, monospace) */
+/* El navegador usa la primera fuente disponible de izquierda a derecha */
+.fuente-serif {
+    /* Fuentes serif: tienen pequeños remates en las letras (estilo clásico) */
+    font-family: "Times New Roman", Georgia, serif;
+}
+
+.fuente-sans {
+    /* Fuentes sans-serif: sin remates, estilo moderno y limpio */
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.fuente-mono {
+    /* Fuentes monoespaciadas: cada letra ocupa el mismo ancho (ideal para código) */
+    font-family: "Courier New", Consolas, monospace;
+}
+
+/* ---- font-size: tamaño del texto ---- */
+/* Se puede definir en px (píxeles), em, rem, %, entre otros */
+.tamano-pequeno {
+    font-size: 12px;
+}
+
+.tamano-normal {
+    font-size: 16px; /* tamaño por defecto en la mayoría de navegadores */
+}
+
+.tamano-grande {
+    font-size: 24px;
+}
+
+.tamano-muy-grande {
+    font-size: 36px;
+}
+
+/* ---- font-weight: grosor de la fuente ---- */
+/* Valores numéricos: 100 (ultra-thin) a 900 (ultra-bold) */
+/* También acepta palabras clave: normal (400), bold (700) */
+.peso-light {
+    font-weight: 300; /* más delgado que lo normal */
+}
+
+.peso-normal {
+    font-weight: 400; /* equivalente a "normal" */
+}
+
+.peso-bold {
+    font-weight: 700; /* equivalente a "bold" (negrita) */
+}
+
+/* ---- font-style: estilo de la fuente ---- */
+.estilo-normal {
+    font-style: normal;
+}
+
+.estilo-italica {
+    font-style: italic; /* cursiva */
+}
+
+/* ---- text-decoration: decoración del texto ---- */
+/* Valores: underline (subrayado), line-through (tachado), overline (línea arriba), none */
+.decoracion-subrayado {
+    text-decoration: underline;
+}
+
+.decoracion-tachado {
+    text-decoration: line-through;
+}
+
+.decoracion-ninguna {
+    text-decoration: none; /* útil para quitar el subrayado de los enlaces */
+}
+
+/* ---- text-align: alineación del texto ---- */
+/* Valores: left (izquierda), center (centro), right (derecha), justify (justificado) */
+.alinear-izquierda {
+    text-align: left; /* valor por defecto */
+}
+
+.alinear-centro {
+    text-align: center;
+}
+
+.alinear-derecha {
+    text-align: right;
+}
+
+/* ---- line-height: espacio entre líneas ---- */
+/* Un valor de 1.5 significa 1.5 veces el tamaño de la fuente */
+.espaciado-linea {
+    line-height: 2; /* doble espacio entre líneas */
+    max-width: 500px;
+}
+
+/* ---- letter-spacing: espacio entre letras ---- */
+.espaciado-letras {
+    letter-spacing: 4px; /* 4 píxeles extra entre cada letra */
+}
+
+/* ---- text-transform: transformar mayúsculas/minúsculas ---- */
+/* El texto en HTML no cambia, solo cambia cómo se muestra visualmente */
+.texto-mayusculas {
+    text-transform: uppercase; /* todo en MAYÚSCULAS */
+}
+
+.texto-minusculas {
+    text-transform: lowercase; /* todo en minúsculas */
+}
+
+.texto-capitalizado {
+    text-transform: capitalize; /* Primera Letra De Cada Palabra En Mayúscula */
+}

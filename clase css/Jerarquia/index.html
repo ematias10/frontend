@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceptos de CSS</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Clase CSS</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../Colores/index.html">Colores</a></li>
+                <li><a href="../Display/index.html">Display</a></li>
+                <li><a href="../Flexbox/index.html">Flexbox</a></li>
+                <li><a href="../Grid/index.html">Grid</a></li>
+                <li><a href="../Jerarquia/index.html">Jerarquía</a></li>
+                <li><a href="../Modelo-de-Caja/index.html">Modelo de Caja</a></li>
+                <li><a href="../Posicionamiento/index.html">Posicionamiento</a></li>
+                <li><a href="../Pseudoclases/index.html">Pseudoclases</a></li>
+                <li><a href="../Selectores/index.html">Selectores</a></li>
+                <li><a href="../Tipografia/index.html">Tipografía</a></li>
+                <li><a href="../Unidades/index.html">Unidades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenido">
+        <h1>Jerarquía de CSS</h1>
+
+    <p class="texto_verde">lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p class="texto_verde">lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    
+    <!-- Este párrafo tiene tanto la clase "texto_verde" como el id "texto_rojo" -->
+    <!-- El id tiene mayor prioridad que la clase, por lo que el color será rojo -->
+    <!-- RECUERDA: el ID debe ser único en la página -->
+    
+    <p id="texto_rojo" class="texto_verde">lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </main>
+</body>
+</html>

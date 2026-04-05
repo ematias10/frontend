@@ -1,0 +1,193 @@
+/* ========================================= */
+/* UNIDADES DE MEDIDA EN CSS                 */
+/* ========================================= */
+/* Dos tipos principales:
+   ABSOLUTAS: tamaño fijo (px, cm, mm, in, pt)
+   RELATIVAS: tamaño variable según contexto (em, rem, %, vw, vh, vmin, vmax)
+
+   Las más usadas en web: px, rem, em, %, vw, vh */
+
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* El font-size del html es la base para la unidad rem */
+/* Por defecto es 16px en la mayoría de navegadores */
+html {
+    font-size: 16px; /* 1rem = 16px */
+}
+
+h2 {
+    color: #2c3e50;
+    margin-top: 30px;
+}
+
+/* =============================== */
+/* UNIDADES ABSOLUTAS               */
+/* =============================== */
+
+/* px (píxeles): unidad absoluta más usada en web */
+/* 1px = 1 punto en la pantalla (aunque varía con la densidad de píxeles) */
+/* El tamaño NO cambia al redimensionar la ventana */
+.caja-px {
+    width: 300px; /* siempre 300 píxeles, sin importar el tamaño de la ventana */
+    padding: 15px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+/* =============================== */
+/* em: RELATIVA AL PADRE            */
+/* =============================== */
+/* 1em = el font-size del elemento padre */
+/* Si el padre tiene font-size: 20px → 1em = 20px */
+/* CUIDADO: los em se acumulan (si padre=2em y abuelo=2em, el padre = 4x el abuelo) */
+.contenedor-em {
+    font-size: 20px; /* este es el "base" para los em de los hijos */
+    background-color: #ecf0f1;
+    padding: 10px;
+    border: 2px solid #bdc3c7;
+    margin: 10px 0;
+}
+
+.caja-em {
+    /* 2em de padding = 2 × 20px (font-size del padre) = 40px */
+    padding: 2em;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 5px;
+}
+
+/* =============================== */
+/* rem: RELATIVA A LA RAÍZ (html)   */
+/* =============================== */
+/* 1rem = el font-size del elemento <html> (por defecto 16px) */
+/* Más predecible que em porque siempre se basa en la raíz */
+/* RECOMENDADO para font-sizes y espaciados consistentes */
+.caja-rem {
+    /* 1.5rem = 1.5 × 16px = 24px (siempre, sin importar el padre) */
+    font-size: 1.5rem;
+    padding: 1rem; /* 1 × 16px = 16px */
+    background-color: #27ae60;
+    color: white;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+/* =============================== */
+/* %: RELATIVA AL PADRE             */
+/* =============================== */
+/* El porcentaje se calcula respecto al elemento padre */
+/* width: 50% = la mitad del ancho del padre */
+/* font-size: 150% = 1.5 veces el font-size del padre */
+.contenedor-porcentaje {
+    background-color: #ecf0f1;
+    border: 2px solid #bdc3c7;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%; /* ocupa todo el ancho disponible */
+}
+
+.caja-porcentaje {
+    width: 50%; /* 50% del ancho del contenedor padre */
+    padding: 15px;
+    background-color: #9b59b6;
+    color: white;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.caja-porcentaje-75 {
+    width: 75%; /* 75% del ancho del contenedor padre */
+    padding: 15px;
+    background-color: #8e44ad;
+    color: white;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+/* =============================== */
+/* vw y vh: RELATIVAS AL VIEWPORT   */
+/* =============================== */
+/* vw = viewport width (ancho de la ventana del navegador) */
+/* vh = viewport height (alto de la ventana del navegador) */
+/* 1vw = 1% del ancho de la ventana */
+/* 1vh = 1% del alto de la ventana */
+/* Útiles para crear secciones a pantalla completa */
+
+.caja-vw {
+    width: 50vw; /* 50% del ancho de la ventana (no del padre) */
+    padding: 15px;
+    background-color: #e67e22;
+    color: white;
+    border-radius: 5px;
+    margin: 10px 0;
+    /* Redimensiona la ventana para ver cómo cambia */
+}
+
+.caja-vh {
+    height: 20vh; /* 20% del alto de la ventana */
+    padding: 15px;
+    background-color: #d35400;
+    color: white;
+    border-radius: 5px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center; /* centra el texto verticalmente */
+}
+
+/* =============================== */
+/* COMPARACIÓN VISUAL               */
+/* =============================== */
+.comparacion {
+    margin: 10px 0;
+}
+
+.barra {
+    padding: 10px;
+    margin: 5px 0;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.barra-px {
+    width: 300px; /* fijo: siempre 300px */
+    background-color: #3498db;
+}
+
+.barra-porcentaje {
+    width: 50%; /* relativo al padre */
+    background-color: #9b59b6;
+}
+
+.barra-vw {
+    width: 50vw; /* relativo a la ventana */
+    background-color: #e67e22;
+}
+
+.barra-em {
+    width: 20em; /* relativo al font-size del padre */
+    background-color: #e74c3c;
+}
+
+.barra-rem {
+    width: 20rem; /* relativo al font-size de html (16px × 20 = 320px) */
+    background-color: #27ae60;
+}
+
+/* Estilos para la lista de resumen */
+ul {
+    line-height: 2;
+}
+
+li strong {
+    color: #2c3e50;
+}

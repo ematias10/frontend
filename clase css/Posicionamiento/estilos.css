@@ -1,0 +1,142 @@
+/* ========================================= */
+/* POSICIONAMIENTO EN CSS (position)         */
+/* ========================================= */
+/* La propiedad position define el método de posicionamiento.
+   Se combina con top, right, bottom, left para mover el elemento.
+   Valores: static, relative, absolute, fixed, sticky */
+
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    /* Espacio extra al fondo para demostrar el scroll con fixed */
+    padding-bottom: 100px;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-top: 30px;
+}
+
+.caja {
+    padding: 15px;
+    margin: 10px 0;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* ---- position: static (por defecto) ---- */
+/* El elemento sigue el flujo normal del documento */
+/* Las propiedades top, right, bottom, left NO tienen efecto */
+.static {
+    position: static; /* valor por defecto, no es necesario escribirlo */
+    top: 50px;        /* ← NO funciona con static */
+    left: 50px;       /* ← NO funciona con static */
+    background-color: #95a5a6;
+}
+
+/* ---- position: relative ---- */
+/* El elemento se desplaza DESDE su posición original */
+/* Su espacio original SIGUE ocupado en el flujo */
+/* Útil también como contenedor para elementos absolute */
+.relative {
+    position: relative;
+    top: 20px;    /* se mueve 20px hacia ABAJO desde su posición original */
+    left: 30px;   /* se mueve 30px hacia la DERECHA desde su posición original */
+    background-color: #3498db;
+}
+
+/* ---- position: absolute ---- */
+/* El elemento SALE del flujo normal (no ocupa espacio) */
+/* Se posiciona respecto al ancestro con position: relative/absolute/fixed más cercano */
+/* Si no encuentra ninguno, se posiciona respecto al viewport */
+.contenedor-absolute {
+    position: relative; /* ¡IMPORTANTE! El padre debe tener position para ser referencia */
+    background-color: #ecf0f1;
+    border: 2px solid #bdc3c7;
+    padding: 20px;
+    height: 120px;
+}
+
+.absolute {
+    position: absolute;
+    top: 10px;    /* 10px desde el BORDE SUPERIOR del contenedor */
+    right: 10px;  /* 10px desde el BORDE DERECHO del contenedor */
+    background-color: #e74c3c;
+    width: 300px;
+}
+
+/* ---- position: fixed ---- */
+/* El elemento se fija en la ventana del navegador */
+/* NO se mueve al hacer scroll */
+/* Se posiciona respecto al viewport */
+/* Útil para: barras de navegación fijas, botones flotantes, etc. */
+.fixed {
+    position: fixed;
+    bottom: 20px;  /* 20px desde el borde inferior de la ventana */
+    right: 20px;   /* 20px desde el borde derecho de la ventana */
+    background-color: #8e44ad;
+    z-index: 100;  /* asegurar que esté encima de otros elementos */
+    width: 300px;
+}
+
+/* ---- position: sticky ---- */
+/* Se comporta como relative HASTA que el scroll llega a la posición indicada */
+/* Luego se "pega" como fixed dentro de su contenedor */
+.contenedor-scroll {
+    background-color: #ecf0f1;
+    border: 2px solid #bdc3c7;
+    padding: 10px;
+    height: 200px;
+    overflow-y: scroll; /* habilitar scroll vertical */
+}
+
+.sticky {
+    position: sticky;
+    top: 0; /* se pega cuando llega al borde superior del contenedor */
+    background-color: #f39c12;
+    z-index: 10;
+}
+
+/* ---- z-index: orden de apilamiento ---- */
+/* Solo funciona en elementos con position distinto de static */
+/* Mayor z-index = más arriba (encima) */
+/* Menor z-index = más abajo (detrás) */
+.contenedor-zindex {
+    position: relative;
+    height: 180px;
+}
+
+.zindex-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100px;
+    background-color: rgba(52, 152, 219, 0.9);
+    z-index: 1; /* capa 1 (la más atrás) */
+}
+
+.zindex-2 {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    width: 200px;
+    height: 100px;
+    background-color: rgba(231, 76, 60, 0.9);
+    z-index: 2; /* capa 2 (en medio) */
+}
+
+.zindex-3 {
+    position: absolute;
+    top: 40px;
+    left: 80px;
+    width: 200px;
+    height: 100px;
+    background-color: rgba(46, 204, 113, 0.9);
+    z-index: 3; /* capa 3 (la más al frente) */
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox en CSS</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Clase CSS</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../Colores/index.html">Colores</a></li>
+                <li><a href="../Display/index.html">Display</a></li>
+                <li><a href="../Flexbox/index.html">Flexbox</a></li>
+                <li><a href="../Grid/index.html">Grid</a></li>
+                <li><a href="../Jerarquia/index.html">Jerarquía</a></li>
+                <li><a href="../Modelo-de-Caja/index.html">Modelo de Caja</a></li>
+                <li><a href="../Posicionamiento/index.html">Posicionamiento</a></li>
+                <li><a href="../Pseudoclases/index.html">Pseudoclases</a></li>
+                <li><a href="../Selectores/index.html">Selectores</a></li>
+                <li><a href="../Tipografia/index.html">Tipografía</a></li>
+                <li><a href="../Unidades/index.html">Unidades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenido">
+        <h1>Flexbox en CSS</h1>
+
+    <!-- Flexbox es un sistema de diseño UNIDIMENSIONAL (una fila O una columna) -->
+    <!-- Se activa con display: flex en el contenedor PADRE -->
+    <!-- Los hijos directos se convierten en "flex items" -->
+
+    <!-- 1. flex-direction: dirección del eje principal -->
+    <h2>flex-direction: row (fila, por defecto)</h2>
+    <div class="contenedor direccion-fila">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <h2>flex-direction: column (columna)</h2>
+    <div class="contenedor direccion-columna">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <!-- 2. justify-content: alineación en el eje PRINCIPAL -->
+    <h2>justify-content (alinear en eje principal)</h2>
+
+    <h3>flex-start (inicio, por defecto)</h3>
+    <div class="contenedor jc-start">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <h3>center (centro)</h3>
+    <div class="contenedor jc-center">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <h3>flex-end (final)</h3>
+    <div class="contenedor jc-end">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <h3>space-between (espacio entre elementos)</h3>
+    <div class="contenedor jc-between">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <h3>space-around (espacio alrededor de cada elemento)</h3>
+    <div class="contenedor jc-around">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <h3>space-evenly (espacio igual en todas partes)</h3>
+    <div class="contenedor jc-evenly">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <!-- 3. align-items: alineación en el eje CRUZADO (perpendicular) -->
+    <h2>align-items (alinear en eje cruzado)</h2>
+
+    <h3>stretch (estirar, por defecto)</h3>
+    <div class="contenedor ai-stretch">
+        <div class="item">1</div>
+        <div class="item item-alto">2 (más alto)</div>
+        <div class="item">3</div>
+    </div>
+
+    <h3>center (centro vertical)</h3>
+    <div class="contenedor ai-center">
+        <div class="item">1</div>
+        <div class="item item-alto">2 (más alto)</div>
+        <div class="item">3</div>
+    </div>
+
+    <h3>flex-start (arriba)</h3>
+    <div class="contenedor ai-start">
+        <div class="item">1</div>
+        <div class="item item-alto">2 (más alto)</div>
+        <div class="item">3</div>
+    </div>
+
+    <!-- 4. flex-wrap: envolver elementos cuando no caben -->
+    <h2>flex-wrap</h2>
+
+    <h3>nowrap (sin envolver, por defecto - los items se comprimen)</h3>
+    <div class="contenedor wrap-no">
+        <div class="item item-ancho">1</div>
+        <div class="item item-ancho">2</div>
+        <div class="item item-ancho">3</div>
+        <div class="item item-ancho">4</div>
+        <div class="item item-ancho">5</div>
+    </div>
+
+    <h3>wrap (los items saltan a la siguiente línea)</h3>
+    <div class="contenedor wrap-si">
+        <div class="item item-ancho">1</div>
+        <div class="item item-ancho">2</div>
+        <div class="item item-ancho">3</div>
+        <div class="item item-ancho">4</div>
+        <div class="item item-ancho">5</div>
+    </div>
+
+    <!-- 5. gap: espacio entre elementos flex -->
+    <h2>gap (espacio entre items)</h2>
+    <div class="contenedor con-gap">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+
+    <!-- 6. Propiedades de los HIJOS (flex items) -->
+    <h2>flex-grow, flex-shrink, flex-basis (propiedades de los hijos)</h2>
+    <div class="contenedor">
+        <!-- flex-grow: cuánto crece cada item para llenar el espacio disponible -->
+        <div class="item grow-1">grow: 1</div>
+        <div class="item grow-2">grow: 2 (crece el doble)</div>
+        <div class="item grow-1">grow: 1</div>
+    </div>
+
+    <!-- 7. Ejemplo práctico: centrar un elemento horizontal y verticalmente -->
+    <h2>Centrar con Flexbox (el truco más útil)</h2>
+    <div class="contenedor centrado-perfecto">
+        <div class="item">Estoy centrado</div>
+    </div>
+    </main>
+</body>
+</html>

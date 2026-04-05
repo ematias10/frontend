@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display en CSS</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Clase CSS</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../Colores/index.html">Colores</a></li>
+                <li><a href="../Display/index.html">Display</a></li>
+                <li><a href="../Flexbox/index.html">Flexbox</a></li>
+                <li><a href="../Grid/index.html">Grid</a></li>
+                <li><a href="../Jerarquia/index.html">Jerarquía</a></li>
+                <li><a href="../Modelo-de-Caja/index.html">Modelo de Caja</a></li>
+                <li><a href="../Posicionamiento/index.html">Posicionamiento</a></li>
+                <li><a href="../Pseudoclases/index.html">Pseudoclases</a></li>
+                <li><a href="../Selectores/index.html">Selectores</a></li>
+                <li><a href="../Tipografia/index.html">Tipografía</a></li>
+                <li><a href="../Unidades/index.html">Unidades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenido">
+        <h1>Propiedad Display en CSS</h1>
+
+    <!-- La propiedad display controla CÓMO se comporta un elemento en el flujo del documento -->
+
+    <!-- 1. display: block -->
+    <!-- Los elementos block ocupan todo el ancho disponible y generan salto de línea -->
+    <h2>display: block</h2>
+    <div class="bloque">Soy un div (block por defecto) - ocupo todo el ancho</div>
+    <div class="bloque">Otro div - estoy en una nueva línea</div>
+    <!-- Elementos block por defecto: div, p, h1-h6, section, article, header, footer -->
+
+    <!-- 2. display: inline -->
+    <!-- Los elementos inline solo ocupan el espacio de su contenido, NO generan salto de línea -->
+    <!-- NO se les puede aplicar width ni height -->
+    <h2>display: inline</h2>
+    <span class="en-linea">Soy un span (inline)</span>
+    <span class="en-linea">Otro span al lado</span>
+    <span class="en-linea">Otro más al lado</span>
+    <!-- Elementos inline por defecto: span, a, strong, em, img -->
+
+    <!-- 3. display: inline-block -->
+    <!-- Combina lo mejor de ambos: está en línea pero SÍ acepta width y height -->
+    <h2>display: inline-block</h2>
+    <div class="inline-bloque">Caja 1</div>
+    <div class="inline-bloque">Caja 2</div>
+    <div class="inline-bloque">Caja 3</div>
+
+    <!-- 4. display: none -->
+    <!-- El elemento desaparece completamente, como si no existiera en el HTML -->
+    <h2>display: none</h2>
+    <p>Abajo hay un elemento con display: none (no se ve):</p>
+    <div class="oculto">Este texto NO se ve en la página</div>
+    <p>El elemento de arriba está oculto y no ocupa espacio.</p>
+
+    <!-- 5. Diferencia entre display: none y visibility: hidden -->
+    <h2>none vs visibility: hidden</h2>
+    <div class="visible">Caja visible</div>
+    <div class="oculto-invisible">Caja con visibility: hidden (ocupa espacio pero no se ve)</div>
+    <div class="visible">Caja visible</div>
+    </main>
+</body>
+</html>

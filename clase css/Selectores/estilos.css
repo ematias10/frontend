@@ -1,0 +1,185 @@
+/* ========================================= */
+/* SELECTORES EN CSS                         */
+/* ========================================= */
+/* Los selectores determinan QUÉ elementos HTML reciben los estilos.
+   Orden de especificidad (de menor a mayor):
+   etiqueta (1) < clase (10) < id (100) < inline style (1000) < !important */
+
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-top: 30px;
+}
+
+/* =============================== */
+/* 1. SELECTOR DE ETIQUETA         */
+/* =============================== */
+/* Selecciona TODOS los elementos de ese tipo */
+/* Sintaxis: nombre-etiqueta { ... } */
+p {
+    font-size: 15px;
+    line-height: 1.6;
+    padding: 5px 0;
+}
+
+/* =============================== */
+/* 2. SELECTOR DE CLASE (.nombre)  */
+/* =============================== */
+/* Selecciona elementos con class="nombre" */
+/* Se puede usar en múltiples elementos (reutilizable) */
+/* Sintaxis: .nombre-clase { ... } */
+.resaltado {
+    background-color: #f1c40f;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+}
+
+/* =============================== */
+/* 3. SELECTOR DE ID (#nombre)     */
+/* =============================== */
+/* Selecciona el elemento con id="nombre" */
+/* El ID debe ser ÚNICO en la página completa */
+/* Tiene MAYOR especificidad que la clase */
+/* Sintaxis: #nombre-id { ... } */
+#especial {
+    background-color: #e74c3c;
+    color: white;
+    padding: 15px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* =============================== */
+/* 4. SELECTOR DESCENDIENTE        */
+/* =============================== */
+/* Selecciona elementos que están DENTRO de otro (a cualquier profundidad) */
+/* Sintaxis: padre descendiente { ... } (separados por espacio) */
+.contenedor-desc {
+    background-color: #d5e8f7;
+    padding: 15px;
+    border: 2px solid #3498db;
+}
+
+/* Selecciona todos los <p> dentro de .contenedor-desc, sin importar la profundidad */
+.contenedor-desc p {
+    color: #2980b9;
+    font-weight: bold;
+}
+
+/* =============================== */
+/* 5. SELECTOR HIJO DIRECTO (>)    */
+/* =============================== */
+/* Selecciona SOLO hijos inmediatos (no nietos ni más profundos) */
+/* Sintaxis: padre > hijo { ... } */
+.contenedor-hijo {
+    background-color: #d5f5e3;
+    padding: 15px;
+    border: 2px solid #27ae60;
+}
+
+/* Solo afecta a los <p> que son hijos DIRECTOS de .contenedor-hijo */
+.contenedor-hijo > p {
+    color: #27ae60;
+    font-weight: bold;
+    border-left: 4px solid #27ae60;
+    padding-left: 10px;
+}
+
+/* =============================== */
+/* 6. SELECTOR DE ATRIBUTO         */
+/* =============================== */
+/* Selecciona elementos según sus atributos HTML */
+/* [attr]: tiene el atributo */
+/* [attr="valor"]: atributo con valor exacto */
+/* [attr^="valor"]: atributo que EMPIEZA con ese valor */
+/* [attr$="valor"]: atributo que TERMINA con ese valor */
+/* [attr*="valor"]: atributo que CONTIENE ese valor */
+
+/* Selecciona input con type="text" */
+input[type="text"] {
+    border: 2px solid #3498db;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 4px;
+}
+
+/* Selecciona input con type="email" */
+input[type="email"] {
+    border: 2px solid #27ae60;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 4px;
+}
+
+/* Selecciona input con type="password" */
+input[type="password"] {
+    border: 2px solid #e74c3c;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 4px;
+}
+
+/* Selecciona enlaces con target="_blank" (enlaces externos) */
+a[target="_blank"] {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* =============================== */
+/* 7. SELECTOR MÚLTIPLE (,)        */
+/* =============================== */
+/* La coma permite aplicar el mismo estilo a varios selectores */
+/* Sintaxis: selector1, selector2 { ... } */
+.info,
+.alerta {
+    padding: 10px;
+    border-radius: 4px;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.info {
+    background-color: #d5e8f7;
+    border-left: 4px solid #3498db;
+}
+
+.alerta {
+    background-color: #fde0dc;
+    border-left: 4px solid #e74c3c;
+}
+
+/* =============================== */
+/* 8. SELECTOR UNIVERSAL (*)       */
+/* =============================== */
+/* Selecciona TODOS los elementos de la página */
+/* Se usa comúnmente para un "reset" de estilos */
+/* Sintaxis: * { ... } */
+/* Ejemplo: * { margin: 0; padding: 0; box-sizing: border-box; } */
+/* ¡OJO! No está activado aquí para no afectar los demás ejemplos */
+
+/* =============================== */
+/* 9. COMBINACIÓN DE SELECTORES    */
+/* =============================== */
+/* Se pueden combinar selectores para ser más específicos */
+
+/* p.grande = elementos <p> que ADEMÁS tengan class="grande" */
+/* (un div con class="grande" NO se afecta) */
+p.grande {
+    font-size: 20px;
+    color: #8e44ad;
+}
+
+/* .grande.negrita = elementos que tengan AMBAS clases al mismo tiempo */
+.grande.negrita {
+    font-weight: bold;
+    text-decoration: underline;
+}

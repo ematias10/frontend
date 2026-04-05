@@ -1,0 +1,81 @@
+/* ========================================= */
+/* COLORES EN CSS                            */
+/* ========================================= */
+/* CSS ofrece múltiples formas de definir colores.
+   Se pueden aplicar a textos (color), fondos (background-color),
+   bordes (border-color) y muchas otras propiedades. */
+
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 10px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* 1. Color por nombre */
+/* CSS tiene ~140 colores predefinidos como: red, blue, green, tomato, coral, etc. */
+.color-nombre {
+    color: tomato;
+}
+
+/* 2. Color hexadecimal (#RRGGBB) */
+/* Cada par representa Rojo, Verde y Azul con valores de 00 a FF */
+/* 00 = sin color, FF = máximo color */
+.color-hex {
+    color: #3498db;
+}
+
+/* 3. Color hexadecimal abreviado (#RGB) */
+/* Cuando cada par tiene dígitos iguales se puede abreviar: #FF5500 → #F50 */
+.color-hex-corto {
+    color: #F50;
+}
+
+/* 4. Color RGB: rgb(rojo, verde, azul) */
+/* Cada valor va de 0 (sin color) a 255 (máximo color) */
+.color-rgb {
+    color: rgb(46, 204, 113);
+}
+
+/* 5. Color RGBA: rgba(rojo, verde, azul, alfa) */
+/* El cuarto valor (alfa) controla la opacidad: 0 = transparente, 1 = opaco */
+.color-rgba {
+    color: rgba(155, 89, 182, 0.5);
+}
+
+/* 6. Color HSL: hsl(matiz, saturación, luminosidad) */
+/* Matiz: 0-360 (grados en la rueda de color, 0=rojo, 120=verde, 240=azul) */
+/* Saturación: 0% (gris) a 100% (color puro) */
+/* Luminosidad: 0% (negro) a 100% (blanco), 50% es el color normal */
+.color-hsl {
+    color: hsl(270, 60%, 50%);
+}
+
+/* 7. Color HSLA: hsla(matiz, saturación, luminosidad, alfa) */
+/* Igual que HSL pero con canal alfa para controlar la opacidad */
+.color-hsla {
+    color: hsla(340, 80%, 50%, 0.7);
+}
+
+/* Los colores se pueden aplicar a diferentes propiedades */
+.caja-colores {
+    /* color: cambia el color del texto */
+    color: white;
+    /* background-color: cambia el color de fondo */
+    background-color: #2c3e50;
+    /* border: incluye grosor, estilo y color del borde */
+    border: 3px solid #e74c3c;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+}

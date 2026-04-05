@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades de Medida en CSS</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Clase CSS</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../Colores/index.html">Colores</a></li>
+                <li><a href="../Display/index.html">Display</a></li>
+                <li><a href="../Flexbox/index.html">Flexbox</a></li>
+                <li><a href="../Grid/index.html">Grid</a></li>
+                <li><a href="../Jerarquia/index.html">Jerarquía</a></li>
+                <li><a href="../Modelo-de-Caja/index.html">Modelo de Caja</a></li>
+                <li><a href="../Posicionamiento/index.html">Posicionamiento</a></li>
+                <li><a href="../Pseudoclases/index.html">Pseudoclases</a></li>
+                <li><a href="../Selectores/index.html">Selectores</a></li>
+                <li><a href="../Tipografia/index.html">Tipografía</a></li>
+                <li><a href="../Unidades/index.html">Unidades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenido">
+        <h1>Unidades de Medida en CSS</h1>
+
+    <!-- CSS tiene dos tipos de unidades: ABSOLUTAS y RELATIVAS -->
+
+    <!-- ============================== -->
+    <!-- UNIDADES ABSOLUTAS              -->
+    <!-- ============================== -->
+    <!-- No varían según el contexto, siempre miden lo mismo -->
+
+    <h2>Unidades absolutas</h2>
+
+    <!-- px (píxeles): la unidad más común y fácil de entender -->
+    <div class="caja-px">
+        <p>Ancho: 300px (píxeles fijos, no cambia al redimensionar)</p>
+    </div>
+
+    <!-- ============================== -->
+    <!-- UNIDADES RELATIVAS              -->
+    <!-- ============================== -->
+    <!-- Varían según el contexto (padre, raíz, viewport) -->
+
+    <h2>Unidades relativas al texto</h2>
+
+    <!-- em: relativa al font-size del PADRE -->
+    <!-- Si el padre tiene font-size: 16px, entonces 1em = 16px -->
+    <div class="contenedor-em">
+        <p>Padre tiene font-size: 20px</p>
+        <div class="caja-em">
+            <p>Mi padding es 2em = 2 × 20px = 40px</p>
+        </div>
+    </div>
+
+    <!-- rem: relativa al font-size del elemento RAÍZ (html) -->
+    <!-- Más predecible que em porque siempre se basa en la raíz -->
+    <div class="caja-rem">
+        <p>Mi font-size es 1.5rem = 1.5 × 16px (raíz) = 24px</p>
+    </div>
+
+    <h2>Unidades relativas al porcentaje (%)</h2>
+
+    <!-- %: relativa al elemento PADRE -->
+    <div class="contenedor-porcentaje">
+        <div class="caja-porcentaje">
+            <p>Ancho: 50% del padre</p>
+        </div>
+        <div class="caja-porcentaje-75">
+            <p>Ancho: 75% del padre</p>
+        </div>
+    </div>
+
+    <h2>Unidades relativas al viewport (ventana del navegador)</h2>
+
+    <!-- vw: porcentaje del ANCHO de la ventana -->
+    <!-- vh: porcentaje del ALTO de la ventana -->
+    <!-- 1vw = 1% del ancho de la ventana -->
+    <!-- 1vh = 1% del alto de la ventana -->
+    <div class="caja-vw">
+        <p>Ancho: 50vw = 50% del ancho de la ventana (redimensiona para ver el efecto)</p>
+    </div>
+
+    <div class="caja-vh">
+        <p>Alto: 20vh = 20% del alto de la ventana</p>
+    </div>
+
+    <!-- vmin y vmax -->
+    <!-- vmin: 1% del lado MÁS PEQUEÑO del viewport -->
+    <!-- vmax: 1% del lado MÁS GRANDE del viewport -->
+
+    <h2>Comparación visual de unidades</h2>
+
+    <div class="comparacion">
+        <div class="barra barra-px">300px</div>
+        <div class="barra barra-porcentaje">50%</div>
+        <div class="barra barra-vw">50vw</div>
+        <div class="barra barra-em">20em</div>
+        <div class="barra barra-rem">20rem</div>
+    </div>
+
+    <h2>Resumen: cuándo usar cada unidad</h2>
+    <ul>
+        <li><strong>px:</strong> tamaños fijos, bordes, sombras</li>
+        <li><strong>rem:</strong> font-size, spacing (predecible y consistente)</li>
+        <li><strong>em:</strong> cuando quieres que el tamaño dependa del padre</li>
+        <li><strong>%:</strong> anchos relativos al contenedor padre</li>
+        <li><strong>vw/vh:</strong> layouts a pantalla completa, secciones de altura completa</li>
+    </ul>
+    </main>
+</body>
+</html>

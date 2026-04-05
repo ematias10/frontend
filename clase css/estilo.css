@@ -1,0 +1,93 @@
+/* ========================================= */
+/* ESTILOS COMPARTIDOS DEL SITIO             */
+/* ========================================= */
+/* Este archivo contiene los estilos comunes para todas las páginas
+   de la carpeta "clase css". Su objetivo es mantener una navegación
+   consistente entre los distintos ejemplos. */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+header {
+	background: linear-gradient(135deg, #1f3c88, #2d6cdf);
+	color: white;
+	padding: 24px 20px 16px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+	margin: 0 0 14px;
+	font-size: 32px;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+nav li {
+	margin: 0;
+}
+
+nav a {
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	background-color: rgba(255, 255, 255, 0.16);
+	padding: 8px 14px;
+	border-radius: 999px;
+	font-weight: bold;
+	transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+	background-color: rgba(255, 255, 255, 0.28);
+	transform: translateY(-1px);
+}
+
+.contenido {
+	padding: 24px 20px;
+}
+
+.portada {
+	max-width: 900px;
+}
+
+.portada p {
+	font-size: 18px;
+	line-height: 1.6;
+}
+
+.portada h2 {
+	margin-top: 24px;
+}
+
+.portada ul {
+	line-height: 1.9;
+}
+
+@media (max-width: 768px) {
+	header h1 {
+		font-size: 26px;
+	}
+
+	nav ul {
+		gap: 8px;
+	}
+
+	nav a {
+		width: 100%;
+		text-align: center;
+	}
+}

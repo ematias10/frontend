@@ -1,0 +1,232 @@
+/* ========================================= */
+/* PSEUDOCLASES Y PSEUDOELEMENTOS EN CSS     */
+/* ========================================= */
+/* PSEUDOCLASES (:) → seleccionan elementos según su ESTADO o POSICIÓN
+   Ejemplo: :hover, :focus, :first-child, :nth-child()
+
+   PSEUDOELEMENTOS (::) → crean sub-elementos virtuales
+   Ejemplo: ::before, ::after, ::first-letter, ::selection */
+
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-top: 30px;
+}
+
+/* ======================================= */
+/* PSEUDOCLASES (un solo : )               */
+/* ======================================= */
+
+/* ---- :hover ---- */
+/* Se activa cuando el mouse está ENCIMA del elemento */
+/* Muy usado en botones, enlaces y elementos interactivos */
+.btn-hover {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* transición suave */
+}
+
+/* Al pasar el mouse, el botón cambia de color */
+.btn-hover:hover {
+    background-color: #2980b9;
+}
+
+.caja-hover {
+    background-color: #ecf0f1;
+    padding: 20px;
+    margin: 10px 0;
+    border: 2px solid #bdc3c7;
+    transition: all 0.3s;
+}
+
+.caja-hover:hover {
+    background-color: #3498db;
+    color: white;
+    border-color: #2980b9;
+    transform: scale(1.02); /* crece un poco */
+}
+
+/* ---- :active ---- */
+/* Se activa cuando el elemento está siendo PRESIONADO (clic mantenido) */
+.btn-active {
+    background-color: #e74c3c;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-active:active {
+    background-color: #c0392b;
+    transform: scale(0.95); /* se encoge al presionar */
+}
+
+/* ---- :focus ---- */
+/* Se activa cuando el elemento tiene el FOCO (al hacer clic o tabular) */
+/* Muy importante para accesibilidad */
+.input-focus {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #bdc3c7;
+    border-radius: 5px;
+    width: 350px;
+    transition: border-color 0.3s;
+}
+
+.input-focus:focus {
+    border-color: #3498db;
+    outline: none; /* quita el borde por defecto del navegador */
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.4);
+}
+
+/* ---- :first-child y :last-child ---- */
+/* :first-child → selecciona el PRIMER hijo de su padre */
+/* :last-child → selecciona el ÚLTIMO hijo de su padre */
+.lista-child {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-child li {
+    padding: 10px;
+    margin: 4px 0;
+    background-color: #ecf0f1;
+    border-radius: 4px;
+}
+
+.lista-child li:first-child {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+}
+
+.lista-child li:last-child {
+    background-color: #e74c3c;
+    color: white;
+    font-weight: bold;
+}
+
+/* ---- :nth-child(n) ---- */
+/* Selecciona el enésimo hijo */
+/* nth-child(2) → el segundo hijo */
+/* nth-child(odd) → hijos impares (1, 3, 5...) */
+/* nth-child(even) → hijos pares (2, 4, 6...) */
+/* nth-child(3n) → cada 3 hijos (3, 6, 9...) */
+.lista-nth {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-nth li {
+    padding: 10px;
+    margin: 4px 0;
+    border-radius: 4px;
+}
+
+/* Selecciona los hijos pares (2, 4, 6...) */
+.lista-nth li:nth-child(even) {
+    background-color: #d5dbdb;
+}
+
+/* Selecciona específicamente el segundo hijo */
+.lista-nth li:nth-child(2) {
+    background-color: #27ae60;
+    color: white;
+    font-weight: bold;
+}
+
+/* ---- :not() ---- */
+/* Selecciona todos los elementos que NO coincidan con el selector interno */
+.lista-not {
+    list-style: none;
+    padding: 0;
+}
+
+/* Todos los <li> que NO tengan la clase "excluido" */
+.lista-not li:not(.excluido) {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    margin: 4px 0;
+    border-radius: 4px;
+}
+
+.lista-not li.excluido {
+    background-color: #ecf0f1;
+    padding: 10px;
+    margin: 4px 0;
+    border-radius: 4px;
+    color: #999;
+}
+
+/* ======================================= */
+/* PSEUDOELEMENTOS (doble :: )             */
+/* ======================================= */
+
+/* ---- ::before y ::after ---- */
+/* Insertan contenido virtual ANTES o DESPUÉS del contenido del elemento */
+/* OBLIGATORIO: la propiedad content (aunque esté vacía: content: "") */
+.con-icono::before {
+    content: "★ ";  /* se inserta ANTES del texto */
+    color: #f39c12;
+    font-size: 20px;
+}
+
+.con-icono::after {
+    content: " ★";  /* se inserta DESPUÉS del texto */
+    color: #f39c12;
+    font-size: 20px;
+}
+
+/* ---- ::first-letter ---- */
+/* Estiliza SOLO la primera letra del elemento */
+/* Útil para crear efecto de "letra capital" como en libros/revistas */
+.letra-capital::first-letter {
+    font-size: 48px;
+    font-weight: bold;
+    color: #e74c3c;
+    float: left;          /* hace que el texto rodee la letra */
+    margin-right: 8px;
+    line-height: 1;
+}
+
+.letra-capital {
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+/* ---- ::first-line ---- */
+/* Estiliza SOLO la primera línea del texto */
+/* La primera línea depende del ancho del contenedor */
+.primera-linea {
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+.primera-linea::first-line {
+    font-weight: bold;
+    color: #8e44ad;
+    font-size: 18px;
+}
+
+/* ---- ::selection ---- */
+/* Estiliza el texto cuando el usuario lo SELECCIONA con el mouse */
+.seleccion-custom::selection {
+    background-color: #e74c3c;
+    color: white;
+}

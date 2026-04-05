@@ -1,0 +1,90 @@
+/* ========================================= */
+/* PROPIEDAD DISPLAY EN CSS                  */
+/* ========================================= */
+/* La propiedad display define cómo un elemento se comporta
+   en el flujo del documento (layout).
+   Valores principales: block, inline, inline-block, none, flex, grid */
+
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-top: 30px;
+}
+
+/* ---- display: block ---- */
+/* - Ocupa el 100% del ancho del contenedor padre */
+/* - Genera un salto de línea antes y después */
+/* - Acepta width, height, margin y padding en todas las direcciones */
+.bloque {
+    display: block; /* por defecto en div, p, h1-h6 */
+    background-color: #3498db;
+    color: white;
+    padding: 15px;
+    margin: 5px 0;
+}
+
+/* ---- display: inline ---- */
+/* - Solo ocupa el ancho de su contenido */
+/* - NO genera salto de línea (se quedan en la misma línea) */
+/* - NO acepta width ni height */
+/* - Solo acepta margin y padding horizontal (izquierda/derecha) */
+.en-linea {
+    display: inline; /* por defecto en span, a, strong, em */
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 10px;
+    /* width: 200px;  ← ESTO NO FUNCIONA en elementos inline */
+    /* height: 100px; ← ESTO TAMPOCO FUNCIONA */
+}
+
+/* ---- display: inline-block ---- */
+/* - Se queda en la misma línea como inline */
+/* - PERO acepta width, height, margin y padding como block */
+/* - Es la combinación de ambos mundos */
+.inline-bloque {
+    display: inline-block;
+    width: 150px;    /* ✓ funciona porque es inline-block */
+    height: 80px;    /* ✓ funciona porque es inline-block */
+    background-color: #27ae60;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    line-height: 80px; /* centrar texto verticalmente */
+}
+
+/* ---- display: none ---- */
+/* - El elemento desaparece completamente */
+/* - NO ocupa espacio en la página */
+/* - Es como si no existiera en el HTML */
+.oculto {
+    display: none;
+    background-color: #9b59b6;
+    padding: 15px;
+}
+
+/* ---- Comparación: display:none vs visibility:hidden ---- */
+.visible {
+    background-color: #f39c12;
+    color: white;
+    padding: 15px;
+    margin: 5px 0;
+}
+
+/* visibility: hidden → el elemento es invisible PERO sigue ocupando su espacio */
+/* display: none → el elemento desaparece y NO ocupa espacio */
+.oculto-invisible {
+    visibility: hidden; /* invisible pero ocupa espacio */
+    background-color: #8e44ad;
+    color: white;
+    padding: 15px;
+    margin: 5px 0;
+}

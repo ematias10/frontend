@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caja en CSS</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Clase CSS</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../Colores/index.html">Colores</a></li>
+                <li><a href="../Display/index.html">Display</a></li>
+                <li><a href="../Flexbox/index.html">Flexbox</a></li>
+                <li><a href="../Grid/index.html">Grid</a></li>
+                <li><a href="../Jerarquia/index.html">Jerarquía</a></li>
+                <li><a href="../Modelo-de-Caja/index.html">Modelo de Caja</a></li>
+                <li><a href="../Posicionamiento/index.html">Posicionamiento</a></li>
+                <li><a href="../Pseudoclases/index.html">Pseudoclases</a></li>
+                <li><a href="../Selectores/index.html">Selectores</a></li>
+                <li><a href="../Tipografia/index.html">Tipografía</a></li>
+                <li><a href="../Unidades/index.html">Unidades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenido">
+        <h1>Modelo de Caja (Box Model)</h1>
+
+    <!-- Todos los elementos HTML son "cajas" con 4 capas: -->
+    <!-- CONTENT → PADDING → BORDER → MARGIN -->
+    <!-- De adentro hacia afuera -->
+
+    <!-- 1. Content (contenido): el texto o elementos internos -->
+    <!-- 2. Padding (relleno): espacio entre el contenido y el borde -->
+    <!-- 3. Border (borde): línea que rodea el padding y el contenido -->
+    <!-- 4. Margin (margen): espacio exterior entre la caja y otros elementos -->
+
+    <div class="caja-basica">
+        <p>Esta caja tiene margin, border, padding y content. Inspecciona este elemento con las herramientas del navegador (F12) para ver el modelo de caja.</p>
+    </div>
+
+    <!-- Padding: espacio INTERIOR (entre el contenido y el borde) -->
+    <div class="caja-padding">
+        <p>Esta caja tiene mucho padding (relleno interno). Nota cómo el texto está alejado de los bordes.</p>
+    </div>
+
+    <!-- Margin: espacio EXTERIOR (entre esta caja y las demás) -->
+    <div class="caja-margin">
+        <p>Esta caja tiene mucho margin (espacio exterior). Nota la separación con las otras cajas.</p>
+    </div>
+
+    <!-- Border: la línea que rodea la caja -->
+    <div class="caja-border">
+        <p>Esta caja tiene un borde grueso y visible.</p>
+    </div>
+
+    <!-- Diferencia entre padding individual y abreviado -->
+    <div class="caja-padding-individual">
+        <p>Esta caja tiene padding diferente en cada lado.</p>
+    </div>
+
+    <!-- box-sizing: border-box vs content-box -->
+    <!-- Por defecto, width/height solo afectan al contenido (content-box) -->
+    <!-- Con border-box, width/height incluyen padding y border -->
+    <h2>box-sizing: content-box vs border-box</h2>
+    <div class="caja-content-box">
+        <p>content-box: width 300px + padding + border = más de 300px total</p>
+    </div>
+    <div class="caja-border-box">
+        <p>border-box: width 300px incluye padding y border = exactamente 300px total</p>
+    </div>
+    </main>
+</body>
+</html>

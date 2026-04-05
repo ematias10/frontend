@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamiento en CSS</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Clase CSS</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../Colores/index.html">Colores</a></li>
+                <li><a href="../Display/index.html">Display</a></li>
+                <li><a href="../Flexbox/index.html">Flexbox</a></li>
+                <li><a href="../Grid/index.html">Grid</a></li>
+                <li><a href="../Jerarquia/index.html">Jerarquía</a></li>
+                <li><a href="../Modelo-de-Caja/index.html">Modelo de Caja</a></li>
+                <li><a href="../Posicionamiento/index.html">Posicionamiento</a></li>
+                <li><a href="../Pseudoclases/index.html">Pseudoclases</a></li>
+                <li><a href="../Selectores/index.html">Selectores</a></li>
+                <li><a href="../Tipografia/index.html">Tipografía</a></li>
+                <li><a href="../Unidades/index.html">Unidades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenido">
+        <h1>Posicionamiento en CSS (position)</h1>
+
+    <!-- La propiedad position controla DÓNDE se ubica un elemento -->
+    <!-- Trabaja junto con top, right, bottom, left para mover el elemento -->
+
+    <!-- 1. position: static (valor por defecto) -->
+    <!-- El elemento sigue el flujo normal del documento -->
+    <!-- top, right, bottom, left NO tienen efecto -->
+    <h2>position: static (por defecto)</h2>
+    <div class="caja static">Static: sigo el flujo normal. top/left no me afectan.</div>
+
+    <!-- 2. position: relative -->
+    <!-- El elemento mantiene su posición en el flujo PERO se puede mover -->
+    <!-- Se desplaza RESPECTO a su posición original -->
+    <!-- El espacio original que ocupaba se mantiene -->
+    <h2>position: relative</h2>
+    <div class="caja relative">Relative: me moví 20px abajo y 30px a la derecha de mi posición original.</div>
+    <p>↑ Nota el espacio vacío arriba: es donde el elemento ESTABA originalmente.</p>
+
+    <!-- 3. position: absolute -->
+    <!-- El elemento SALE del flujo normal (no ocupa espacio) -->
+    <!-- Se posiciona RESPECTO al ancestro posicionado más cercano -->
+    <!-- Si no hay ancestro posicionado, se posiciona respecto al body/viewport -->
+    <h2>position: absolute</h2>
+    <div class="contenedor-absolute">
+        <p>Soy el contenedor (position: relative)</p>
+        <div class="caja absolute">Absolute: estoy posicionado respecto a mi contenedor padre.</div>
+    </div>
+
+    <!-- 4. position: fixed -->
+    <!-- El elemento se fija en la pantalla y NO se mueve al hacer scroll -->
+    <!-- Se posiciona respecto al viewport (ventana del navegador) -->
+    <h2>position: fixed</h2>
+    <div class="caja fixed">Fixed: estoy fijo en la esquina inferior derecha.</div>
+    <p>El elemento fixed se queda pegado aunque hagas scroll.</p>
+
+    <!-- 5. position: sticky -->
+    <!-- El elemento se comporta como relative HASTA que llegas a cierto punto del scroll -->
+    <!-- Luego se "pega" como fixed -->
+    <h2>position: sticky</h2>
+    <div class="contenedor-scroll">
+        <p>Haz scroll dentro de esta caja para ver el efecto sticky:</p>
+        <div class="caja sticky">Sticky: me pego al hacer scroll</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+        <p>Excepteur sint occaecat cupidatat non proident.</p>
+        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+    <!-- 6. z-index: controla qué elemento está encima de otro -->
+    <h2>z-index (orden de apilamiento)</h2>
+    <div class="contenedor-zindex">
+        <div class="caja zindex-1">z-index: 1</div>
+        <div class="caja zindex-2">z-index: 2 (encima)</div>
+        <div class="caja zindex-3">z-index: 3 (más encima)</div>
+    </div>
+    </main>
+</body>
+</html>

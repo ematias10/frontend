@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Clase CSS</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../Colores/index.html">Colores</a></li>
+                <li><a href="../Display/index.html">Display</a></li>
+                <li><a href="../Flexbox/index.html">Flexbox</a></li>
+                <li><a href="../Grid/index.html">Grid</a></li>
+                <li><a href="../Jerarquia/index.html">Jerarquía</a></li>
+                <li><a href="../Modelo-de-Caja/index.html">Modelo de Caja</a></li>
+                <li><a href="../Posicionamiento/index.html">Posicionamiento</a></li>
+                <li><a href="../Pseudoclases/index.html">Pseudoclases</a></li>
+                <li><a href="../Selectores/index.html">Selectores</a></li>
+                <li><a href="../Tipografia/index.html">Tipografía</a></li>
+                <li><a href="../Unidades/index.html">Unidades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenido">
+        <h1>CSS Grid</h1>
+
+    <!-- Grid es un sistema de diseño BIDIMENSIONAL (filas Y columnas al mismo tiempo) -->
+    <!-- Se activa con display: grid en el contenedor PADRE -->
+    <!-- Flexbox = 1 dimensión (fila O columna) / Grid = 2 dimensiones (filas Y columnas) -->
+
+    <!-- 1. Grid básico con columnas -->
+    <h2>Grid básico: 3 columnas iguales</h2>
+    <!-- grid-template-columns define cuántas columnas y su tamaño -->
+    <div class="grid-basico">
+        <div class="celda">1</div>
+        <div class="celda">2</div>
+        <div class="celda">3</div>
+        <div class="celda">4</div>
+        <div class="celda">5</div>
+        <div class="celda">6</div>
+    </div>
+
+    <!-- 2. Columnas con tamaños diferentes -->
+    <h2>Columnas de distinto tamaño</h2>
+    <div class="grid-mixto">
+        <div class="celda">200px</div>
+        <div class="celda">1fr (fracción)</div>
+        <div class="celda">1fr (fracción)</div>
+    </div>
+
+    <!-- 3. La unidad fr (fracción del espacio disponible) -->
+    <h2>Unidad fr (fracciones)</h2>
+    <div class="grid-fracciones">
+        <div class="celda">1fr</div>
+        <div class="celda">2fr (doble de ancho)</div>
+        <div class="celda">1fr</div>
+    </div>
+
+    <!-- 4. grid-template-rows: definir filas -->
+    <h2>Definir filas explícitas</h2>
+    <div class="grid-filas">
+        <div class="celda">Fila 1 (100px)</div>
+        <div class="celda">Fila 1</div>
+        <div class="celda">Fila 2 (200px)</div>
+        <div class="celda">Fila 2</div>
+    </div>
+
+    <!-- 5. gap: espacio entre celdas -->
+    <h2>Gap (espacio entre celdas)</h2>
+    <div class="grid-gap">
+        <div class="celda">1</div>
+        <div class="celda">2</div>
+        <div class="celda">3</div>
+        <div class="celda">4</div>
+        <div class="celda">5</div>
+        <div class="celda">6</div>
+    </div>
+
+    <!-- 6. Posicionar items en celdas específicas -->
+    <h2>Posicionar items con grid-column y grid-row</h2>
+    <div class="grid-posicionar">
+        <!-- Este item ocupa 2 columnas -->
+        <div class="celda item-ancho">Ocupo 2 columnas</div>
+        <div class="celda">Normal</div>
+        <!-- Este item ocupa 2 filas -->
+        <div class="celda item-alto">Ocupo 2 filas</div>
+        <div class="celda">Normal</div>
+        <div class="celda">Normal</div>
+    </div>
+
+    <!-- 7. Grid con áreas nombradas (grid-template-areas) -->
+    <h2>Grid con áreas nombradas (layout de página)</h2>
+    <div class="grid-areas">
+        <header class="area-header">Header</header>
+        <nav class="area-nav">Nav</nav>
+        <main class="area-main">Main Content</main>
+        <aside class="area-sidebar">Sidebar</aside>
+        <footer class="area-footer">Footer</footer>
+    </div>
+
+    <!-- 8. repeat() y auto-fill/auto-fit -->
+    <h2>repeat() con auto-fill (columnas responsivas)</h2>
+    <div class="grid-auto">
+        <div class="celda">1</div>
+        <div class="celda">2</div>
+        <div class="celda">3</div>
+        <div class="celda">4</div>
+        <div class="celda">5</div>
+        <div class="celda">6</div>
+    </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colores en CSS</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Clase CSS</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../Colores/index.html">Colores</a></li>
+                <li><a href="../Display/index.html">Display</a></li>
+                <li><a href="../Flexbox/index.html">Flexbox</a></li>
+                <li><a href="../Grid/index.html">Grid</a></li>
+                <li><a href="../Jerarquia/index.html">Jerarquía</a></li>
+                <li><a href="../Modelo-de-Caja/index.html">Modelo de Caja</a></li>
+                <li><a href="../Posicionamiento/index.html">Posicionamiento</a></li>
+                <li><a href="../Pseudoclases/index.html">Pseudoclases</a></li>
+                <li><a href="../Selectores/index.html">Selectores</a></li>
+                <li><a href="../Tipografia/index.html">Tipografía</a></li>
+                <li><a href="../Unidades/index.html">Unidades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenido">
+        <h1>Colores en CSS</h1>
+
+    <!-- Existen varias formas de definir colores en CSS -->
+
+    <!-- 1. Colores por nombre: CSS tiene ~140 colores con nombre predefinido -->
+    <p class="color-nombre">Este texto usa un color por nombre (tomato)</p>
+
+    <!-- 2. Colores hexadecimales: se usan 6 dígitos precedidos por # -->
+    <!-- Formato: #RRGGBB donde cada par va de 00 a FF -->
+    <p class="color-hex">Este texto usa color hexadecimal (#3498db = azul)</p>
+
+    <!-- 3. Colores hexadecimales abreviados: cuando los pares se repiten se puede abreviar -->
+    <!-- Ejemplo: #FF5500 se puede escribir como #F50 -->
+    <p class="color-hex-corto">Este texto usa color hexadecimal abreviado (#F50)</p>
+
+    <!-- 4. Colores RGB: rojo, verde y azul con valores de 0 a 255 -->
+    <p class="color-rgb">Este texto usa color RGB rgb(46, 204, 113)</p>
+
+    <!-- 5. Colores RGBA: igual que RGB pero con canal alfa (opacidad) de 0 a 1 -->
+    <p class="color-rgba">Este texto usa color RGBA con 50% de opacidad</p>
+
+    <!-- 6. Colores HSL: matiz (0-360), saturación (%) y luminosidad (%) -->
+    <!-- Es más intuitivo para elegir colores -->
+    <p class="color-hsl">Este texto usa color HSL hsl(270, 60%, 50%)</p>
+
+    <!-- 7. Colores HSLA: igual que HSL pero con canal alfa (opacidad) -->
+    <p class="color-hsla">Este texto usa color HSLA con 70% de opacidad</p>
+
+    <!-- Los colores no solo se aplican al texto, también a fondos y bordes -->
+    <div class="caja-colores">
+        <p>Esta caja muestra color de fondo, color de texto y color de borde</p>
+    </div>
+    </main>
+</body>
+</html>
