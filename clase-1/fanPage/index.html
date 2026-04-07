@@ -12,26 +12,28 @@
 
     <!-- ENCABEZADO PRINCIPAL DEL SITIO -->
     <header>
-        <img src="img/logo.png" alt="Logo de Los Simpson" width="70">
-        <h1>Los Simpson</h1>
+        <div class="brand">
+            <img src="img/logo.png" alt="Logo de Los Simpson" width="70">
+            <div>
+                <p class="eyebrow">Springfield desde 1989</p>
+                <h1>Los Simpson</h1>
+            </div>
+        </div>
         <button>Iniciar sesión</button>
     </header>
 
-    <hr>
-
     <!-- MENÚ DE NAVEGACIÓN -->
     <nav>
-        <a href="#sinopsis">Sinopsis</a> |
-        <a href="#personajes">Personajes</a> |
-        <a href="#episodios">Episodios Destacados</a> |
-        <a href="#curiosidades">Curiosidades</a> |
+        <a href="#sinopsis">Sinopsis</a>
+        <a href="#personajes">Personajes</a>
+        <a href="#episodios">Episodios destacados</a>
+        <a href="#curiosidades">Curiosidades</a>
         <a href="#suscripcion">Suscribirse</a>
     </nav>
 
-    <hr>
-
-    <!-- CONTENIDO PRINCIPAL -->
-    <main>
+    <div class="page-layout">
+        <!-- CONTENIDO PRINCIPAL -->
+        <main>
 
         <!-- SECCIÓN: SINOPSIS -->
         <section id="sinopsis">
@@ -53,8 +55,6 @@
                     de la vida, la cultura y la sociedad estadounidenses.
                 </p>
             </article>
-
-            <hr>
 
             <article>
                 <h3>Historia de la serie</h3>
@@ -78,68 +78,55 @@
             </article>
         </section>
 
-        <hr>
-
         <!-- SECCIÓN: PERSONAJES -->
         <section id="personajes">
             <h2>Personajes Principales</h2>
 
-            <article>
-                <h3>Homero Simpson</h3>
-                <img src="img/homero.png" alt="Homero Simpson"
-                    width="150">
-                <p>
-                    Homero Jay Simpson es el patriarca de la familia. Trabaja como inspector de seguridad en
-                    la Planta Nuclear de Springfield. Es conocido por su amor por la cerveza Duff, las donas
-                    y su famosa exclamación: <em>"¡D'oh!"</em>
-                </p>
-                <br>
-                <p>
-                    A pesar de su torpeza, Homero siempre termina demostrando su amor por su familia.
-                </p>
-            </article>
+            <div class="personajes-lista">
+                <article class="personaje-card">
+                    <img src="img/homero.png" alt="Homero Simpson" width="150">
+                    <h3>Homero Simpson</h3>
+                    <p>
+                        Homero Jay Simpson es el patriarca de la familia. Trabaja como inspector de seguridad en
+                        la Planta Nuclear de Springfield. Es conocido por su amor por la cerveza Duff, las donas
+                        y su famosa exclamación: <em>"¡D'oh!"</em>
+                    </p>
+                    <p>
+                        A pesar de su torpeza, Homero siempre termina demostrando su amor por su familia.
+                    </p>
+                </article>
 
-            <hr>
+                <article class="personaje-card">
+                    <img src="img/marge.png" alt="Marge Simpson" width="150">
+                    <h3>Marge Simpson</h3>
+                    <p>
+                        Marjorie Jacqueline Simpson (de soltera Bouvier) es el corazón moral de la familia.
+                        Es ama de casa, madre dedicada y el equilibrio que mantiene unida a la familia.
+                        Es reconocible por su distintivo cabello azul en forma de colmena.
+                    </p>
+                </article>
 
-            <article>
-                <h3>Marge Simpson</h3>
-                <img src="img/marge.png" alt="Marge Simpson"
-                    width="150">
-                <p>
-                    Marjorie Jacqueline Simpson (de soltera Bouvier) es el corazón moral de la familia.
-                    Es ama de casa, madre dedicada y el equilibrio que mantiene unida a la familia.
-                    Es reconocible por su distintivo cabello azul en forma de colmena.
-                </p>
-            </article>
+                <article class="personaje-card">
+                    <img src="img/bart.png" alt="Bart Simpson" width="150">
+                    <h3>Bart Simpson</h3>
+                    <p>
+                        Bartholomew JoJo Simpson, conocido como Bart, es el hijo mayor de diez años.
+                        Es travieso, impulsivo y un estudiante mediocre en la Escuela Primaria de Springfield.
+                        Su frase más famosa es: <em>"¡Ay, caramba!"</em>
+                    </p>
+                </article>
 
-            <hr>
-
-            <article>
-                <h3>Bart Simpson</h3>
-                <img src="img/bart.png" alt="Bart Simpson"
-                    width="150">
-                <p>
-                    Bartholomew JoJo Simpson, conocido como Bart, es el hijo mayor de diez años.
-                    Es travieso, impulsivo y un estudiante mediocre en la Escuela Primaria de Springfield.
-                    Su frase más famosa es: <em>"¡Ay, caramba!"</em>
-                </p>
-            </article>
-
-            <hr>
-
-            <article>
-                <h3>Lisa Simpson</h3>
-                <img src="img/lisa.png" alt="Lisa Simpson"
-                    width="150">
-                <p>
-                    Lisa Marie Simpson es la hija del medio, de ocho años. Es una superdotada con un
-                    coeficiente intelectual de 159. Toca el saxofón, practica el budismo y es activista
-                    por los derechos de los animales.
-                </p>
-            </article>
+                <article class="personaje-card">
+                    <img src="img/lisa.png" alt="Lisa Simpson" width="150">
+                    <h3>Lisa Simpson</h3>
+                    <p>
+                        Lisa Marie Simpson es la hija del medio, de ocho años. Es una superdotada con un
+                        coeficiente intelectual de 159. Toca el saxofón, practica el budismo y es activista
+                        por los derechos de los animales.
+                    </p>
+                </article>
+            </div>
         </section>
-
-        <hr>
 
         <!-- SECCIÓN: EPISODIOS DESTACADOS -->
         <section id="episodios">
@@ -169,7 +156,6 @@
                 </p>
             </article>
 
-            <br>
             <p>
                 Para ver más episodios y su clasificación oficial, visita
                 <a href="https://www.imdb.com/title/tt0096697/" target="_blank">Los Simpson en IMDb</a>.
@@ -188,138 +174,136 @@
                 <h3>Datos personales</h3>
 
                 <label for="nombre">Nombre completo:</label>
-                <br>
                 <input type="text" id="nombre" name="nombre" placeholder="Ej: Homero Simpson" required>
-                <br><br>
+                <br>
 
                 <label for="email">Correo electrónico:</label>
-                <br>
                 <input type="email" id="email" name="email" placeholder="Ej: homero@springfield.com" required>
-                <br><br>
+                <br>
 
                 <label for="fecha_nac">Fecha de nacimiento:</label>
-                <br>
                 <input type="date" id="fecha_nac" name="fecha_nac">
-                <br><br>
+                <br>
 
                 <label for="telefono">Teléfono (opcional):</label>
-                <br>
                 <input type="tel" id="telefono" name="telefono" placeholder="Ej: +56 9 1234 5678">
-                <br><br>
-
-                <hr>
+                <br>
 
                 <h3>Preferencias de contenido</h3>
                 <p>¿Qué tipo de contenido te interesa recibir? (puedes marcar varias opciones)</p>
 
-                <input type="checkbox" id="noticias" name="contenido" value="noticias">
-                <label for="noticias">Noticias y novedades</label>
-                <br>
+                <div class="option-group">
+                    <label class="option-item" for="noticias">
+                        <input type="checkbox" id="noticias" name="contenido" value="noticias">
+                        <span>Noticias y novedades</span>
+                    </label>
 
-                <input type="checkbox" id="episodios_cb" name="contenido" value="episodios">
-                <label for="episodios_cb">Reseñas de episodios</label>
-                <br>
+                    <label class="option-item" for="episodios_cb">
+                        <input type="checkbox" id="episodios_cb" name="contenido" value="episodios">
+                        <span>Reseñas de episodios</span>
+                    </label>
 
-                <input type="checkbox" id="curiosidades_cb" name="contenido" value="curiosidades">
-                <label for="curiosidades_cb">Curiosidades y datos detrás de escena</label>
-                <br>
+                    <label class="option-item" for="curiosidades_cb">
+                        <input type="checkbox" id="curiosidades_cb" name="contenido" value="curiosidades">
+                        <span>Curiosidades y datos detrás de escena</span>
+                    </label>
 
-                <input type="checkbox" id="merch" name="contenido" value="merch">
-                <label for="merch">Merchandise y productos oficiales</label>
-                <br><br>
+                    <label class="option-item" for="merch">
+                        <input type="checkbox" id="merch" name="contenido" value="merch">
+                        <span>Merchandise y productos oficiales</span>
+                    </label>
+                </div>
 
                 <p>¿Cuál es tu personaje favorito?</p>
 
-                <input type="radio" id="fav_homero" name="favorito" value="homero">
-                <label for="fav_homero">Homero</label>
-                <br>
+                <div class="option-group option-group-radio">
+                    <label class="option-item" for="fav_homero">
+                        <input type="radio" id="fav_homero" name="favorito" value="homero">
+                        <span>Homero</span>
+                    </label>
 
-                <input type="radio" id="fav_marge" name="favorito" value="marge">
-                <label for="fav_marge">Marge</label>
-                <br>
+                    <label class="option-item" for="fav_marge">
+                        <input type="radio" id="fav_marge" name="favorito" value="marge">
+                        <span>Marge</span>
+                    </label>
 
-                <input type="radio" id="fav_bart" name="favorito" value="bart">
-                <label for="fav_bart">Bart</label>
-                <br>
+                    <label class="option-item" for="fav_bart">
+                        <input type="radio" id="fav_bart" name="favorito" value="bart">
+                        <span>Bart</span>
+                    </label>
 
-                <input type="radio" id="fav_lisa" name="favorito" value="lisa">
-                <label for="fav_lisa">Lisa</label>
-                <br>
+                    <label class="option-item" for="fav_lisa">
+                        <input type="radio" id="fav_lisa" name="favorito" value="lisa">
+                        <span>Lisa</span>
+                    </label>
 
-                <input type="radio" id="fav_maggie" name="favorito" value="maggie">
-                <label for="fav_maggie">Maggie</label>
-                <br><br>
-
-                <hr>
+                    <label class="option-item" for="fav_maggie">
+                        <input type="radio" id="fav_maggie" name="favorito" value="maggie">
+                        <span>Maggie</span>
+                    </label>
+                </div>
 
                 <h3>Nivel de fan</h3>
                 <label for="nivel">¿Cuántas temporadas has visto?</label>
-                <br>
                 <input type="number" id="nivel" name="nivel" min="0" max="35" placeholder="0">
-                <br><br>
+                <br>
 
                 <label for="comentario">¿Por qué eres fan de Los Simpson?</label>
-                <br>
                 <textarea id="comentario" name="comentario" rows="4" cols="40"
                     placeholder="Cuéntanos tu historia..."></textarea>
-                <br><br>
+                <br>
 
-                <input type="submit" value="¡Suscribirme ahora!">
-                <input type="reset" value="Limpiar formulario">
+                <div class="form-actions">
+                    <input type="submit" value="¡Suscribirme ahora!">
+                    <input type="reset" value="Limpiar formulario">
+                </div>
 
             </form>
         </section>
 
-    </main>
+        </main>
 
-    <hr>
+        <!-- BARRA LATERAL DE CURIOSIDADES -->
+        <aside id="curiosidades">
+            <div class="aside-box">
+                <h2>Curiosidades de Los Simpson</h2>
 
-    <!-- BARRA LATERAL DE CURIOSIDADES -->
-    <aside id="curiosidades">
-        <h2>Curiosidades de Los Simpson</h2>
+                <h4>¿Sabías que...?</h4>
+                <p>
+                    Los personajes tienen piel amarilla porque Matt Groening quería que, al hacer zapping,
+                    el televidente supiera inmediatamente que estaba viendo Los Simpson.
+                </p>
+                <p>
+                    El número de teléfono de los Simpson es el <strong>555-2432</strong>,
+                    donde las últimas cuatro cifras equivalen a "BHFD" (B-H-F-D), las iniciales de los
+                    nombres en inglés: Bart, Homero, o las iniciales de "Best Homer Family Dad".
+                </p>
+                <p>
+                    La serie ha <em>"predicho"</em> numerosos eventos futuros, incluyendo
+                    tecnología, política y eventos deportivos, lo que la ha convertido en un fenómeno
+                    cultural único.
+                </p>
+                <p>
+                    El creador Matt Groening nombró a los personajes principales según su propia familia,
+                    excepto a Bart, que es un anagrama de la palabra inglesa <em>"brat"</em> (mocoso).
+                </p>
+            </div>
 
-        <h4>¿Sabías que...?</h4>
-        <p>
-            Los personajes tienen piel amarilla porque Matt Groening quería que, al hacer zapping,
-            el televidente supiera inmediatamente que estaba viendo Los Simpson.
-        </p>
-        <br>
-        <p>
-            El número de teléfono de los Simpson es el <strong>555-2432</strong>,
-            donde las últimas cuatro cifras equivalen a "BHFD" (B-H-F-D), las iniciales de los
-            nombres en inglés: Bart, Homero, o las iniciales de "Best Homer Family Dad".
-        </p>
-        <br>
-        <p>
-            La serie ha <em>"predicho"</em> numerosos eventos futuros, incluyendo
-            tecnología, política y eventos deportivos, lo que la ha convertido en un fenómeno
-            cultural único.
-        </p>
-        <br>
-        <p>
-            El creador Matt Groening nombró a los personajes principales según su propia familia,
-            excepto a Bart, que es un anagrama de la palabra inglesa <em>"brat"</em> (mocoso).
-        </p>
-
-        <hr>
-
-        <h4>Datos rápidos</h4>
-        <p><strong>Primera emisión:</strong> 17 de diciembre de 1989</p>
-        <p><strong>Creador:</strong> Matt Groening</p>
-        <p><strong>Cadena:</strong> Fox</p>
-        <p><strong>Temporadas:</strong> 35+</p>
-        <p><strong>Episodios:</strong> 770+</p>
-        <p><strong>Ciudad ficticia:</strong> Springfield</p>
-
-        <hr>
-
-        <p>
-            Visita el sitio oficial en
-            <a href="https://www.fox.com/the-simpsons/" target="_blank">Fox - The Simpsons</a>
-        </p>
-    </aside>
-
-    <hr>
+            <div class="aside-box datos-box">
+                <h4>Datos rápidos</h4>
+                <p><strong>Primera emisión:</strong> 17 de diciembre de 1989</p>
+                <p><strong>Creador:</strong> Matt Groening</p>
+                <p><strong>Cadena:</strong> Fox</p>
+                <p><strong>Temporadas:</strong> 35+</p>
+                <p><strong>Episodios:</strong> 770+</p>
+                <p><strong>Ciudad ficticia:</strong> Springfield</p>
+                <p>
+                    Visita el sitio oficial en
+                    <a href="https://www.fox.com/the-simpsons/" target="_blank">Fox - The Simpsons</a>
+                </p>
+            </div>
+        </aside>
+    </div>
 
     <!-- PIE DE PÁGINA -->
     <footer>
