@@ -1,0 +1,41 @@
+/* 1. Reset Global y Modelo de Cajas [cite: 63, 68] */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    background-color: #f4f4f9;
+}
+
+/* 2. Contenedor de la Boleta (Uso de Clases según Pro-tip) [cite: 19, 69] */
+.boleta-container {
+    border: 2px solid #333;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* 3. Diseño Flexible para los Items [cite: 77, 78] */
+.item-compra {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* 4. Estilo de Total [cite: 81, 85] */
+.total-destacado {
+    font-weight: bold;
+    font-size: 1.4em;
+    text-align: right;
+    margin-top: 20px;
+    color: #2c3e50;
+}
