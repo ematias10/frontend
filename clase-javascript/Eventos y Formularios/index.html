@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos - Interactividad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Tienda Tecnológica</h1>
+    </header>
+
+    <main>
+        <section class="producto">
+            <div class="imagen-contenedor">
+                <img id="imagen-producto" src="https://via.placeholder.com/400x300" alt="Computador Gaming">
+                <p id="coordenadas">Coordenadas: X: 0, Y: 0</p>
+            </div>
+            <div class="detalles">
+                <h2>Computador Gaming Nitro 5</h2>
+                <p class="precio">$899.990</p>
+                <button id="btn-carrito">Agregar al Carrito</button>
+            </div>
+        </section>
+
+        <section class="descuento">
+            <label for="codigo-descuento">Código de Descuento:</label>
+            <input type="text" id="codigo-descuento" placeholder="Ej: PROMO2026">
+            <p id="mensaje-descuento"></p>
+        </section>
+
+        <section class="formulario-container">
+            <h3>Confirmación de Compra</h3>
+            <form id="form-registro">
+                <div class="campo">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre">
+                </div>
+                <div class="campo">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <button type="submit">Finalizar Compra</button>
+            </form>
+            <p id="status-formulario"></p>
+        </section>
+    </main>
+
+    <footer class="apa-anexo">
+        <hr>
+        <h3>Anexo APA: Uso de IA</h3>
+        <p><strong>Prompt utilizado para Expresión Regular:</strong> "Genera una expresión regular robusta en JavaScript para validar un correo electrónico, asegurando que tenga un formato estándar y soporte dominios modernos."</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
