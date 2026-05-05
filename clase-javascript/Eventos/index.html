@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eventos en JavaScript</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Eventos en JavaScript</h1>
+    <p>Explorando eventos de mouse, teclado, contadores y formularios</p>
+  </header>
+
+  <!-- ===== SECCIÓN 1: EVENTOS ===== -->
+  <section class="seccion" id="seccion-eventos">
+    <h2>Eventos de Mouse y Teclado</h2>
+
+    <div class="grupo">
+      <h3>Eventos de Mouse</h3>
+
+      <button id="btn-click" class="btn btn-primario">Haz click aquí</button>
+      <button id="btn-dobleclick" class="btn btn-secundario">Doble click</button>
+
+      <div id="caja-hover" class="caja-hover">
+        Pasa el mouse por aquí
+      </div>
+
+      <img
+        id="img-evento"
+        src="https://picsum.photos/200/120"
+        alt="Imagen de prueba"
+        class="img-evento"
+        title="Haz click derecho o pasa el mouse"
+      />
+    </div>
+
+    <div class="grupo">
+      <h3>Eventos de Teclado</h3>
+      <input
+        type="text"
+        id="input-teclado"
+        class="input-campo"
+        placeholder="Escribe algo aquí..."
+      />
+      <div id="info-tecla" class="info-tecla">Presiona una tecla en el input</div>
+    </div>
+
+    <div id="log-eventos" class="log-eventos">
+      <strong>Registro de eventos:</strong>
+      <ul id="lista-log"></ul>
+    </div>
+  </section>
+
+  <!-- ===== SECCIÓN 2: CONTADOR ===== -->
+  <section class="seccion" id="seccion-contador">
+    <h2>Contador Interactivo</h2>
+    <div class="contador-contenedor">
+      <div id="display-contador" class="display-contador">0</div>
+      <div class="botones-contador">
+        <button id="btn-decrementar" class="btn btn-peligro">&#8722; Decrementar</button>
+        <button id="btn-reiniciar" class="btn btn-advertencia">&#8635; Reiniciar</button>
+        <button id="btn-incrementar" class="btn btn-exito">&#43; Incrementar</button>
+      </div>
+      <p id="mensaje-contador" class="mensaje-contador"></p>
+    </div>
+  </section>
+
+  <!-- ===== SECCIÓN 3: FORMULARIO ===== -->
+  <section class="seccion" id="seccion-formulario">
+    <h2>Formulario de Registro</h2>
+    <form id="formulario-registro" novalidate>
+
+      <div class="campo-grupo">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" class="input-campo" placeholder="Ej: Juan Pérez" />
+        <span class="error-msg" id="error-nombre"></span>
+      </div>
+
+      <div class="campo-grupo">
+        <label for="rut">RUT</label>
+        <input type="text" id="rut" name="rut" class="input-campo" placeholder="Ej: 12.345.678-9" maxlength="12" />
+        <span class="error-msg" id="error-rut"></span>
+      </div>
+
+      <div class="campo-grupo">
+        <label for="edad">Edad</label>
+        <input type="number" id="edad" name="edad" class="input-campo" placeholder="Ej: 22" min="1" max="120" />
+        <span class="error-msg" id="error-edad"></span>
+      </div>
+
+      <button type="submit" class="btn btn-primario btn-enviar">Enviar</button>
+    </form>
+
+    <div id="resultado-formulario" class="resultado-formulario oculto"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
